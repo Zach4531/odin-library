@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="container">
+      <dialog>
+        <form action="">
+          <div class="input-group">
+            <label for="title">Title</label>
+            <input type="text" name="title" id="title" />
+          </div>
+          <div class="input-group">
+            <label for="author">Author</label>
+            <input type="text" name="author" id="author" />
+          </div>
+          <div class="input-group">
+            <label for="pages">Pages</label>
+            <input type="number" name="pages" id="pages" />
+          </div>
+          <div class="input-group">
+            <label for="image">Image</label>
+            <input type="text" name="image" id="image" />
+          </div>
+          <button class="add_book">Add Book</button>
+          <button class="dialog_close">Cancel</button>
+        </form>
+      </dialog>
+      <nav>
+        <h1>Good Reads</h1>
+        <button class="dialog_open">Add Book</button>
+      </nav>
+      <div id="books"></div>
+    </div>
+    <script src="library.js"></script>
+  </body>
+</html>

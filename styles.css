@@ -1,0 +1,112 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #171717;
+  color: #fff;
+}
+
+.container {
+  width: 1080px;
+  margin: auto;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 0;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #0284c7;
+  color: #fff;
+}
+
+img {
+  width: 125px;
+  height: 187px;
+  border-radius: 0.5rem;
+}
+
+.dialog_open {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+.book {
+  padding: 1.5rem 0rem;
+  background-color: #27272a;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+#books {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0rem;
+}
+h1 {
+  font-size: 2rem;
+}
+
+.book h3 {
+  margin: 0.25rem;
+  margin-top: 1rem;
+}
+.book small {
+  opacity: 0.8;
+}
+
+.overlay {
+  display: none;
+  background-color: #27272ad3;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+dialog {
+  background-color: #3c3c41;
+  border: 0;
+  padding: 2rem;
+  width: 350px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 0.5rem;
+  top: 0;
+  bottom: 0;
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 500;
+  color: #fff;
+}
+
+input {
+  border: 0;
+  background-color: #54545a;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  color: #fff;
+}
+
+input:focus {
+  outline: 3px solid #0284c7;
+}

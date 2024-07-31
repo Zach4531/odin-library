@@ -36,17 +36,19 @@ closeDialog.addEventListener('click', (e) => {
   dialog.close();
 });
 
-function Book(title, author, pages, image) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = true;
-  this.image = image;
-  this.info = function () {
+class Book {
+  constructor(title, author, pages, image) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = true;
+    this.image = image;
+  }
+  info() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${
       this.read ? 'has been read' : 'not read yet'
     }`;
-  };
+  }
 }
 
 Book.prototype.toggleRead = function () {

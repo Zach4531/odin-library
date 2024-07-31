@@ -44,7 +44,7 @@ class Book {
     this.read = true;
     this.image = image;
   }
-  info() {
+  get info() {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${
       this.read ? 'has been read' : 'not read yet'
     }`;

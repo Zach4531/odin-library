@@ -9,17 +9,56 @@ const title = document.querySelector('input[name="title"');
 const author = document.querySelector('input[name="author"');
 const pages = document.querySelector('input[name="pages"');
 const image = document.querySelector('input[name="image"');
+const form = document.querySelector('#form');
 
-addButton.addEventListener('click', (e) => {
+const inputs = {
+  title: {
+    element: title,
+    message: 'Title is required',
+  },
+  author: {
+    element: author,
+    message: 'Author is required',
+  },
+  pages: {
+    element: pages,
+    message: 'Pages is required',
+  },
+  image: {
+    element: image,
+    message: 'Image is required',
+  },
+};
+
+function formVal() {
+  const errors = [];
+  for (const input in inputs) {
+    const currentInput = inputs[`${input}`];
+    const error = currentInput.element
+      .closest('.input-group')
+      .querySelector('.input-error');
+    if (currentInput.element.value === '') {
+      errors.push(`${input}`);
+      error.textContent = currentInput.message;
+    } else {
+      error.textContent = '';
+    }
+  }
+  return errors.length === 0;
+}
+
+form.addEventListener('submit', (e) => {
   e.preventDefault();
-
-  addBook(title.value, author.value, pages.value, image.value);
-  title.value = '';
-  author.value = '';
-  pages.value = '';
-  image.value = '';
-  overlay.style.display = 'none';
-  dialog.close();
+  const validated = formVal();
+  if (validated) {
+    addBook(title.value, author.value, pages.value, image.value);
+    overlay.style.display = 'none';
+    dialog.close();
+    title.value = '';
+    author.value = '';
+    pages.value = '';
+    image.value = '';
+  }
 });
 openDialog.addEventListener('click', (e) => {
   e.preventDefault();

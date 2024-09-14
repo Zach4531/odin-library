@@ -110,3 +110,8 @@ input {
 input:focus {
   outline: 3px solid #0284c7;
 }
+
+.input-error {
+  font-size: 0.9rem;
+  color: red;
+}

@@ -10,24 +10,28 @@
     <div class="overlay"></div>
     <div class="container">
       <dialog>
-        <form action="">
+        <form action="" id="form">
           <div class="input-group">
             <label for="title">Title</label>
             <input type="text" name="title" id="title" />
+            <div class="input-error"></div>
           </div>
           <div class="input-group">
             <label for="author">Author</label>
             <input type="text" name="author" id="author" />
+            <div class="input-error"></div>
           </div>
           <div class="input-group">
             <label for="pages">Pages</label>
             <input type="number" name="pages" id="pages" />
+            <div class="input-error"></div>
           </div>
           <div class="input-group">
             <label for="image">Image</label>
             <input type="text" name="image" id="image" />
+            <div class="input-error"></div>
           </div>
-          <button class="add_book">Add Book</button>
+          <button class="add_book" type="submit">Add Book</button>
           <button class="dialog_close">Cancel</button>
         </form>
       </dialog>
